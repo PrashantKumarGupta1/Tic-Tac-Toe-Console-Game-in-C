@@ -41,8 +41,8 @@ gcc tictactoe.c -o tictactoe
 ./tictactoe
 ```
 ### 3️⃣ Follow the on-screen instructions
-You choose X or O:
-X
+You choose x or 0
+x
 
  1 | 2 | 3
 ---|---|---
