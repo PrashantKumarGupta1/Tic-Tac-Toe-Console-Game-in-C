@@ -10,7 +10,7 @@ k:
     scanf("%c", &p);
     if (p != 'x' && p != '0')
     {
-        printf("you choose wron\n");
+        printf("you choose wrong symbol!\n");
         goto k;
     }
     print(a);
@@ -19,7 +19,7 @@ k:
     {
 
     r:
-    l:
+    l:    
         scanf(" %c", &n);
         if (!(n >= '1' && n <= '9'))
         {
@@ -52,47 +52,47 @@ k:
 
         if (a[0][0] == a[0][1] && a[0][1] == a[0][2])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[1][0] == a[1][1] && a[1][1] == a[1][2])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[2][0] == a[2][1] && a[2][1] == a[2][2])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[0][0] == a[1][0] && a[1][0] == a[2][0])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[0][1] == a[1][1] && a[1][1] == a[2][1])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[0][2] == a[1][2] && a[1][2] == a[2][2])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[0][0] == a[1][1] && a[1][1] == a[2][2])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (a[0][2] == a[1][1] && a[1][1] == a[2][0])
         {
-            printf("%c you win", p);
+            printf("%c you win, Congrats!", p);
             break;
         }
         else if (c == 9)
         {
-            printf("Draw Match!\n");
+            printf("It's Draw Match!\n");
             break;
         }
 
