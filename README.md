@@ -2,7 +2,7 @@
 
 A simple **two-player Tic-Tac-Toe** game built in **C**, running entirely in the console.  
 Players alternate turns placing their symbol (**X** or **O**) in a 3×3 grid.  
-The first player to align three symbols (horizontally, vertically, or diagonally) wins.  
+The first player to align three symbols **(horizontally, vertically, or diagonally)** wins.  
 If all cells are filled without a winner, the match ends in a draw.
 
 ---
@@ -24,23 +24,25 @@ If all cells are filled without a winner, the match ends in a draw.
 ---
 
 ## 🗂️ Project Structure
+```
 📁 /Tic-Tac-Toe-C
 ├── tictactoe.c        # Source code
 └── README.md          # This file
-
+```
 ---
 
 ## 🚀 How to Run
 
 ### 1️⃣ Compile the code
-```bash
+```
 gcc tictactoe.c -o tictactoe
 ```
 ### 2️⃣ Run the game
-```bash
+```
 ./tictactoe
 ```
 ### 3️⃣ Follow the on-screen instructions
+```
 You choose x or 0
 x
 
@@ -51,7 +53,7 @@ x
  7 | 8 | 9
 
 Enter a number to place your symbol:
-
+```
 ## 🧑‍💻 Author
 
 **Prashant Kumar Gupta**  
