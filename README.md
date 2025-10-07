@@ -60,7 +60,7 @@ Enter a number to place your symbol:
 🔹 *Embedded Systems Learner | C Programmer*  
 
 📧 **Email:** [guptaprashant1012@gmail.com](mailto:guptaprashant1012@gmail.com)  
-🌐 **GitHub:** [github.com/your-github-PrashantKumarGupta1](https://github.com/your-github-PrashantKumarGupta1)  
+🌐 **GitHub:** https://github.com/your-github-PrashantKumarGupta1
 💼 **LinkedIn:** [linkedin.com/in/prashant-embedded](https://www.linkedin.com/in/prashant-embedded)  
 
 ---
