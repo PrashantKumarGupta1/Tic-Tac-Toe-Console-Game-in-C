@@ -65,7 +65,5 @@ Enter a number to place your symbol:
 
 ## 📝 License
 
-This project is **open-source** and free to use for **learning or academic purposes**.  
-Feel free to **fork, modify, and share** it! 🌟
-
+This project is **open-source** and free to use for **learning or academic purposes**. 
 
