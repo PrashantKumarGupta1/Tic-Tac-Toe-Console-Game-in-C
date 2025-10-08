@@ -27,7 +27,9 @@ If all cells are filled without a winner, the match ends in a draw.
 ```
 📁 /Tic-Tac-Toe-C
 ├── tictactoe.c        # Source code
-└── README.md          # This file
+├── README.md          # Project documentation
+└── .gitignore         # Git ignore file
+
 ```
 ---
 
