@@ -1,125 +1,90 @@
 #include <stdio.h>
-void print(char (*)[3]);
-void main()
-{
-    int i, j;
-    char p, n;
-    char a[3][3] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
-k:
-    printf("you choose x or 0\n");
-    scanf("%c", &p);
-    if (p != 'x' && p != '0')
-    {
-        printf("you choose wrong symbol!\n");
-        goto k;
-    }
-    print(a);
-    int c = 0;
-    while (1)
-    {
 
-    r:
-    l:    
-        scanf(" %c", &n);
-        if (!(n >= '1' && n <= '9'))
-        {
-            printf("you select wrong number\n");
-            goto l;
-        }
-        int f = 0;
-        for (i = 0; i < 3; i++)
-        {
-            for (j = 0; j < 3; j++)
+#define SIZE 3
 
-            {
-                if (a[i][j] == n)
-                {
-                    if (a[i][j] != 'x' && a[i][j] != '0')
-                    {
-                        a[i][j] = p;
-                        c++;
-                        f = 1;
-                    }
+void printBoard(char board[SIZE][SIZE]);
+int checkWin(char board[SIZE][SIZE]);
+int isFull(char board[SIZE][SIZE]);
+
+int main() {
+    char board[SIZE][SIZE] = {{'1','2','3'}, {'4','5','6'}, {'7','8','9'}};
+    char player = 'x';
+    char choice;
+    int win = 0, valid, i, j;
+
+    printf("=== TIC TAC TOE ===\n\n");
+
+    while (1) {
+        printBoard(board);
+        printf("Player %c, choose a position (1-9): ", player);
+        scanf(" %c", &choice);
+
+        valid = 0;
+        for (i = 0; i < SIZE; i++) {
+            for (j = 0; j < SIZE; j++) {
+                if (board[i][j] == choice) {
+                    board[i][j] = player;
+                    valid = 1;
+                    break;
                 }
             }
+            if (valid) break;
         }
-        if (f != 1)
-        {
-            printf("already taken Try again.\n");
-            goto r;
-        }
-        print(a);
 
-        if (a[0][0] == a[0][1] && a[0][1] == a[0][2])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
+        if (!valid) {
+            printf("Invalid move! Try again.\n");
+            continue;
         }
-        else if (a[1][0] == a[1][1] && a[1][1] == a[1][2])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[2][0] == a[2][1] && a[2][1] == a[2][2])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[0][0] == a[1][0] && a[1][0] == a[2][0])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[0][1] == a[1][1] && a[1][1] == a[2][1])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[0][2] == a[1][2] && a[1][2] == a[2][2])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[0][0] == a[1][1] && a[1][1] == a[2][2])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (a[0][2] == a[1][1] && a[1][1] == a[2][0])
-        {
-            printf("%c you win, Congrats!", p);
-            break;
-        }
-        else if (c == 9)
-        {
-            printf("It's Draw Match!\n");
+
+        win = checkWin(board);
+        if (win) {
+            printBoard(board);
+            printf("🎉 Player %c wins!\n", player);
             break;
         }
 
-        if (p == 'x')
-        {
-            p = '0';
+        if (isFull(board)) {
+            printBoard(board);
+            printf("🤝 It's a draw!\n");
+            break;
         }
-        else
-        {
-            p = 'x';
-        }
+
+        // Switch player
+        player = (player == 'x') ? '0' : 'x';
     }
+
+    return 0;
 }
-void print(char (*a)[3])
-{
-    int i, j;
-    for (i = 0; i < 3; i++)
-    {
-        for (j = 0; j < 3; j++)
-        {
-            printf(" %c ", a[i][j]);
-            if (j != 2)
-                printf("|");
+
+void printBoard(char board[SIZE][SIZE]) {
+    printf("\n");
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            printf(" %c ", board[i][j]);
+            if (j < SIZE - 1) printf("|");
         }
         printf("\n");
-        if (i != 2)
-            printf("---|---|---\n");
+        if (i < SIZE - 1) printf("---|---|---\n");
     }
     printf("\n");
+}
+
+int checkWin(char board[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        // rows and columns
+        if (board[i][0] == board[i][1] && board[i][1] == board[i][2]) return 1;
+        if (board[0][i] == board[1][i] && board[1][i] == board[2][i]) return 1;
+    }
+    // diagonals
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2]) return 1;
+    if (board[0][2] == board[1][1] && board[1][1] == board[2][0]) return 1;
+    return 0;
+}
+
+int isFull(char board[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++)
+        for (int j = 0; j < SIZE; j++)
+            if (board[i][j] != 'x' && board[i][j] != '0')
+                return 0;
+    return 1;
 }
