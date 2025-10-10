@@ -39,13 +39,13 @@ int main() {
         win = checkWin(board);
         if (win) {
             printBoard(board);
-            printf("🎉 Player %c wins!\n", player);
+            printf("Player %c wins!\n", player);
             break;
         }
 
         if (isFull(board)) {
             printBoard(board);
-            printf("🤝 It's a draw!\n");
+            printf("It's a draw!\n");
             break;
         }
 
@@ -61,10 +61,12 @@ void printBoard(char board[SIZE][SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
             printf(" %c ", board[i][j]);
-            if (j < SIZE - 1) printf("|");
+            if (j < SIZE - 1) 
+                printf("|");
         }
         printf("\n");
-        if (i < SIZE - 1) printf("---|---|---\n");
+        if (i < SIZE - 1) 
+            printf("---|---|---\n");
     }
     printf("\n");
 }
@@ -88,3 +90,4 @@ int isFull(char board[SIZE][SIZE]) {
                 return 0;
     return 1;
 }
+
