@@ -92,18 +92,14 @@ k:
         }
         else if (c == 9)
         {
-            printf("It's a Draw Match!\n");
+            printf("It's a draw!\n");
             break;
         }
 
         if (p == 'x')
-        {
             p = '0';
-        }
         else
-        {
             p = 'x';
-        }
     }
 }
 void print(char (*a)[3])
@@ -122,4 +118,5 @@ void print(char (*a)[3])
             printf("---|---|---\n");
     }
     printf("\n");
+
 }
