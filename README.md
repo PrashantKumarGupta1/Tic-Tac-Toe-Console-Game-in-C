@@ -58,7 +58,7 @@ Enter a number to place your symbol:
 ```
 ## 🧑‍💻 Author
 
-**Prashant Gupta**  
+**Prashant Kumar Gupta**        
 *Embedded Systems Learner | C Programmer*  
 
 📧 **Email:** [guptaprashant1012@gmail.com](mailto:guptaprashant1012@gmail.com)  
