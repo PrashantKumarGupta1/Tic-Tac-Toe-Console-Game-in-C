@@ -58,8 +58,8 @@ Enter a number to place your symbol:
 ```
 ## 🧑‍💻 Author
 
-**Prashant Kumar Gupta**  
-🔹 *Embedded Systems Learner | C Programmer*  
+**Prashant Gupta**  
+*Embedded Systems Learner | C Programmer*  
 
 📧 **Email:** [guptaprashant1012@gmail.com](mailto:guptaprashant1012@gmail.com)  
 [LinkedIn](https://www.linkedin.com/in/prashant-embedded)  
